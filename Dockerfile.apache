@@ -1,0 +1,11 @@
+FROM docker.io/httpd:latest
+
+# Copiar el archivo confightml al directorio de Apache
+COPY ./confightml /usr/local/apache2/htdocs/index.html
+
+# Exponer el puerto 80 para tráfico HTTP
+EXPOSE 80
+
+# Declarar un volumen para persistir datos
+VOLUME ["/mnt/apache"]
+
