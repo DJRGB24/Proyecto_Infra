@@ -1,12 +1,11 @@
 FROM docker.io/mysql:latest
 
-# Configurar la contraseña de root y la base de datos inicial
-ENV MYSQL_ROOT_PASSWORD=rootpassword
-ENV MYSQL_DATABASE=infradb
-
 # Exponer el puerto estándar de MySQL
 EXPOSE 3306
 
 # Declarar un volumen para persistir datos de la base de datos
 VOLUME ["/mnt/mysql"]
 
+# Configurar la contraseña de root y la base de datos inicial
+ENV MYSQL_ROOT_PASSWORD=rootpassword
+ENV MYSQL_DATABASE=infradb
